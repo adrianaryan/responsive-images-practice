@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 <head>
   <title>Cat Life</title>
 
@@ -25,6 +25,22 @@
       to make calculating srcset easier for us :) */
       width: 55%;
     }
+
+    header {
+      color: white;
+      background-color: orange;
+      /*background: linear-gradient(magenta, red);*/
+      background: url(space-header.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      padding: 1rem;
+    }
+
+    header a {
+      color: white;
+    }
+
   </style>
 </head>
 
@@ -54,12 +70,26 @@
       </div>
 
       <div class="photo-frame">
-        <img src="dragon.jpg" alt="a fire-breathing cat">
+        <img  srcset="dragon.jpg 1280w, dragon-800w.jpg 800w dragon-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="dragon.jpg" alt="a fire-breathing cat">
       </div>
 
       <div class="photo-frame">
-        <img src="grr.jpg" alt="a cat making a weird face">
+        <img  srcset="dragon.jpg 1280w, grr-800w.jpg 800w grr-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="grr.jpg" alt="a cat making a weird face">
       </div>
+<!--
+  browser width 2000, images will be 1000
+  browser width 900, images will be 450
+  browser width 800, images will be 400
+  browser width 1600, images will be 800
+ -->
+
+
+
+
     </div>
   </section>
 
